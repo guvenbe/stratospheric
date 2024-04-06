@@ -9,11 +9,11 @@ import software.constructs.Construct;
 // import software.amazon.awscdk.services.sqs.Queue;
 
 public class AppcdkStack2 extends Stack {
-    public AppcdkStack2(final Construct scope, final String id) {
-        this(scope, id, null);
-    }
+//    public AppcdkStack2(final Construct scope, final String id) {
+//        this(scope, id, null);
+//    }
 
-    public AppcdkStack2(final Construct scope, final String id, final StackProps props) {
+    public AppcdkStack2(final Construct scope, final String id, final StackProps props, final String repoName) {
         super(scope, id, props);
 
 //        Repository repository = Repository.Builder.create(this, "repository")
@@ -35,10 +35,10 @@ public class AppcdkStack2 extends Stack {
 
       DockerRepository dockerRepository = new DockerRepository(
         this,
-        "repo",
+        repoName,
         environment,
         new DockerRepository.DockerRepositoryInputParameters(
-          "hello-world-repo",
+          "hello-world-repo2",
           environment.getAccount(),
           10));
 

@@ -4,7 +4,7 @@ import software.amazon.awscdk.App;
 import software.amazon.awscdk.Environment;
 import software.amazon.awscdk.StackProps;
 
-public class AppcdkApp {
+public class AppcdkApp2 {
     public static void main(final String[] args) {
         App app = new App();
 
@@ -17,10 +17,11 @@ public class AppcdkApp {
 
       Environment environment = makeEnv(accoountId, region);
 
-        new AppcdkStack(app, "AppcdkStack", StackProps.builder()
-          .env(environment)
-                .build());
 
+      new AppcdkStack2(app, "AppcdkStack", StackProps.builder()
+        .env(environment)
+        .build(),
+        repoName);
 
         app.synth();
     }
