@@ -16,6 +16,9 @@
     "accountId":"383626418458",
     "region":"us-east-2",
     "repoName":"foo",
+    "applicationName": "hello-world-app",
+    "dockerRepositoryName": "hello-world-app",
+    "dockerImageTag": "latest",
     "@aws-cdk/aws-lambda:recognizeLayerVersion": true,
     "@aws-cdk/core:checkSecretUsage": true,
     "@aws-cdk/core:target-partitions": [
