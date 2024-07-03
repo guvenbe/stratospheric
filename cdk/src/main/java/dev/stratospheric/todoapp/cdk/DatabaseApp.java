@@ -41,7 +41,7 @@ public class DatabaseApp {
       "Database",
       awsEnvironment,
       applicationEnvironment,
-      new PostgresDatabase.DatabaseInputParameters());
+      new PostgresDatabase.DatabaseInputParameters().withPostgresVersion("13").withInstanceClass("db.t2.2xlarge"));
 
     app.synth();
   }

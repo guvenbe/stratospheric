@@ -15,7 +15,7 @@ import static org.testcontainers.containers.localstack.LocalStackContainer.Servi
 @ActiveProfiles("dev")
 public abstract class AbstractDevIntegrationTest {
 
-  static PostgreSQLContainer<?> database = new PostgreSQLContainer<>("postgres:12.9")
+  static PostgreSQLContainer<?> database = new PostgreSQLContainer<>("postgres:12.19")
     .withDatabaseName("stratospheric")
     .withUsername("stratospheric")
     .withPassword("stratospheric");
